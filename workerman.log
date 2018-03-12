@@ -1,0 +1,28 @@
+2018-03-09 14:04:20 exception 'Exception' with message 'You can't send(object) to client, you need to convert it to a string. ' in D:\phpstudy\WWW\wordpress\Workerman\Protocols\Websocket.php:225
+Stack trace:
+#0 D:\phpstudy\WWW\wordpress\Workerman\Connection\TcpConnection.php(313): Workerman\Protocols\Websocket::encode(Object(Workerman\Connection\TcpConnection), Object(Workerman\Connection\TcpConnection))
+#1 D:\phpstudy\WWW\wordpress\app\index.php(62): Workerman\Connection\TcpConnection->send(Object(Workerman\Connection\TcpConnection))
+#2 D:\phpstudy\WWW\wordpress\app\index.php(34): broadcast(Object(Workerman\Connection\TcpConnection))
+#3 [internal function]: {closure}(Object(Workerman\Connection\TcpConnection), 'ad')
+#4 D:\phpstudy\WWW\wordpress\Workerman\Connection\TcpConnection.php(632): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'ad')
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #22)
+#6 D:\phpstudy\WWW\wordpress\Workerman\Events\Select.php(286): call_user_func_array(Array, Array)
+#7 D:\phpstudy\WWW\wordpress\Workerman\Worker.php(856): Workerman\Events\Select->loop()
+#8 D:\phpstudy\WWW\wordpress\Workerman\Worker.php(473): Workerman\Worker->run()
+#9 D:\phpstudy\WWW\wordpress\Workerman\Worker.php(382): Workerman\Worker::runAllWorkers()
+#10 D:\phpstudy\WWW\wordpress\app\index.php(78): Workerman\Worker::runAll()
+#11 {main}
+2018-03-09 14:43:09 exception 'Exception' with message 'You can't send(NULL) to client, you need to convert it to a string. ' in D:\phpstudy\WWW\wordpress\Workerman\Protocols\Websocket.php:225
+Stack trace:
+#0 D:\phpstudy\WWW\wordpress\Workerman\Connection\TcpConnection.php(313): Workerman\Protocols\Websocket::encode(NULL, Object(Workerman\Connection\TcpConnection))
+#1 D:\phpstudy\WWW\wordpress\app\index.php(74): Workerman\Connection\TcpConnection->send(NULL)
+#2 D:\phpstudy\WWW\wordpress\app\index.php(42): sendMessageByUid('user1', NULL)
+#3 [internal function]: {closure}(Object(Workerman\Connection\TcpConnection), 'ce')
+#4 D:\phpstudy\WWW\wordpress\Workerman\Connection\TcpConnection.php(632): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'ce')
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #17)
+#6 D:\phpstudy\WWW\wordpress\Workerman\Events\Select.php(286): call_user_func_array(Array, Array)
+#7 D:\phpstudy\WWW\wordpress\Workerman\Worker.php(856): Workerman\Events\Select->loop()
+#8 D:\phpstudy\WWW\wordpress\Workerman\Worker.php(473): Workerman\Worker->run()
+#9 D:\phpstudy\WWW\wordpress\Workerman\Worker.php(382): Workerman\Worker::runAllWorkers()
+#10 D:\phpstudy\WWW\wordpress\app\index.php(79): Workerman\Worker::runAll()
+#11 {main}
